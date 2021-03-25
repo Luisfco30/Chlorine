@@ -1,0 +1,603 @@
+/* Variables */
+:root {
+  --bg-color: #eaeaea;
+  --ana1-color: #79c298;
+  --ana2-color: #89a4d5; 
+  --base-color: #8ed1e6;
+  --comp-color: #db6071;
+
+  --font-parrafos: "Poppins", sans-serif;
+  --font-h: "Anton", sans-serif;
+}
+
+/* Globales */
+img {
+  transition: all 0.3s ease-in-out;
+}
+body::-webkit-scrollbar {
+  width: 8px; /* Tamaño del scroll en vertical */
+  height: 8px; /* Tamaño del scroll en horizontal */
+  display: none; /* Ocultar scroll */
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+body::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Cambiamos el fondo cuando esté en active */
+body::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+body::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+/* Cambiamos el fondo cuando esté en active o hover */
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+p {
+  margin: 0;
+  color: #333333;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  font-family: var(--font-h);
+  color: #333333;
+}
+
+a {
+  color: var(--bg-color);
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* Utilidades */
+.contenedor {
+  width: 90%;
+  max-width: 800px;
+
+  margin: 0 auto;
+}
+
+.bg-header {
+  background-color: var(--ana2-color);
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 5px;
+}
+
+.logo {
+  width: 80px;
+}
+
+.bg-color {
+  background-color: var(--bg-color);
+  font-family: var(--font-parrafos);
+}
+
+.o-hidden {
+  overflow-x: hidden;
+}
+
+.aside {
+  height: calc(100vh - 90px);
+  width: 300px;
+
+  position: fixed;
+  top: 90px;
+  left: -250px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.fill-panel {
+  padding: 10px;
+  width: calc(100vw - 50px);
+  height: calc(100vh - 90px);
+
+  position: fixed;
+  top: 90px;
+  left: 50px;
+
+  transition: all 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.fill-panel::-webkit-scrollbar {
+  width: 8px; /* Tamaño del scroll en vertical */
+  height: 8px; /* Tamaño del scroll en horizontal */
+  display: none; /* Ocultar scroll */
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.fill-panel::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.fill-panel::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Cambiamos el fondo cuando esté en active */
+.fill-panel::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+.fill-panel::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+/* Cambiamos el fondo cuando esté en active o hover */
+.fill-panel::-webkit-scrollbar-track:hover,
+.fill-panel::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+.aside:hover {
+  left: 0px;
+}
+
+.aside:hover + .fill-panel {
+  left: 300px;
+  width: calc(100vw - 300px);
+}
+
+.nav-aside {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-aside li {
+  color: var(--bg-color);
+  font-family: var(--font-h);
+  font-size: 1.8rem;
+
+  padding: 10px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-aside li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-aside li:hover a {
+  color: var(--comp-color);
+}
+
+.nav-aside li:hover {
+  color: var(--comp-color);
+  background-color: rgba(4, 47, 102, 0.5);
+
+  cursor: pointer;
+}
+
+.bienvenida {
+  background-color: var(--ana1-color);
+  color: var(--bg-color) !important;
+
+  width: auto;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*PRODUCTOS*/
+.btns-tienda {
+  display: flex;
+  margin: 0 !important;
+}
+.btn-chlorine {
+  background-color: var(--ana1-color);
+  border-radius: 1rem;
+  border: 1px var(--bg-color) solid;
+  transition: font-weight 0.5s ease-in-out;
+  margin: 1px 0;
+}
+.btn-chlorine:hover {
+  font-weight: 600;
+}
+.search-div {
+  justify-content: center;
+  display: flex;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0;
+}
+
+.search-tienda {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #2c2c2c;
+  border-radius: 1rem 0 0 1rem;
+  margin-right: 0 !important;
+}
+.btn-search {
+  border: 1px solid #2c2c2c;
+  border-left: none;
+  border-radius: 0 1rem 1rem 0;
+  background-image: url("../img/lupa-srch.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contenedor-productos {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.producto {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+
+  transition: all 0.3s ease-in-out;
+}
+.info-producto {
+  display: flex;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+.btn-producto {
+  margin-top: 0.3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--comp-color);
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+.img-shop {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  width: 100px;
+  height: 100px;
+}
+.agregar {
+  width: 100%;
+  display: flex;
+  padding: 0 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.input-agregar {
+  width: 100%;
+  margin-right: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.btn-agregar{
+  width: 100%;
+  color: white;
+  font-weight: 600;
+  background-color: var(--ana2-color);
+}
+.eliminar {
+  border-top: solid 1px black !important;
+  padding-top: 0.3rem;
+}
+.btn-eliminar {
+  width: 100%;
+  padding: 0;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.name-product {
+  font-weight: 700;
+}
+.id-producto{
+  text-align: right;
+}
+.pagination-own {
+  justify-content: center !important;
+}
+.pagination-text {
+  color: var(--ana2-color);
+}
+
+
+/*VENTAS*/
+.ventastbl, .tblTitle {
+  width: 100%;
+}
+
+.tblTitle{
+  font-size: 25px;
+}
+.btn-verdeChlorine{
+  background-color: #79c298;
+  margin-right: 5px;
+}
+
+#btnVentaE{
+background-color: #db6071;
+border-radius: 6px;
+border-color: transparent;
+}
+.th-ventas, th{
+  padding: 0.75rem
+}
+
+/*USUARIOS*/
+.header-table{
+  background-color: var(--base-color);
+}
+.header-titletbl{
+  background-color: var(--ana1-color);
+}
+.usuarios-pd{
+  padding: 1.25rem;
+  
+}
+.table-user{
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.btn-rosaChlorine{
+  background-color: var(--comp-color);
+  color: #fff;
+  font-weight: 500;
+}
+#mydatatable tfoot input {
+  width: 100% !important;
+}
+
+#mydatatable tfoot {
+  display: table-header-group !important;
+}
+
+.chart {
+  max-width: 400px;
+
+}
+
+canvas {
+  margin: 0 auto;
+
+}
+
+.far {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - -50px);
+}
+
+/*LOGIN*/
+.modal-login{
+  margin: 0;
+  padding: 0;
+}
+.main-login{
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("../img/banner.png");
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.form-login{
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+form {
+  padding-top: 0 !important;
+}
+.container-login {
+  width: 55%;
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.without-color-border {
+  width: 100%;
+  border: none !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  align-items: center !important;
+}
+.container-login .title {
+  margin-bottom: 1rem;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(-135deg, #8ed1e6, #79c298);
+}
+.container-login form {
+  padding: 10px 30px 50px 30px;
+}
+.container-login form .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.container-login form .field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  
+}
+.container-login form .field input:focus,
+form .field input:valid {
+  border-color: #89a4d5;
+}
+.container-login form .field label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label {
+  top: 0%;
+  font-size: 16px;
+  color: #89a4d5;
+  background: #fff;
+  transform: translateY(-50%);
+}
+form .content {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+form .content .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .content input {
+  width: 15px;
+  height: 15px;
+}
+form .content label {
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+form .field input[type="submit"] {
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #8ed1e6, #79c298);
+  transition: all 0.3s ease;
+}
+form .field input[type="submit"]:active {
+  transform: scale(0.95);
+}
+form .signup-link {
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+form .pass-link a,
+form .signup-link a {
+  color: #4158d0;
+  text-decoration: none;
+}
+form .pass-link a:hover,
+form .signup-link a:hover {
+  text-decoration: underline;
+}
+
+.title .close {
+  padding: 1rem 0;
+}
+.checkbox-email {
+  display: flex;
+  justify-content: center;
+}
+.checkbox-email input {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 2rem;
+}
+.checkbox-email label {
+  padding-left: 0.5rem;
+  font-size: 15px;
+  text-align: left;
+}
+.terminos {
+  text-align: center;
+  font-size: 11.5px;
+}
+
+.scroll-registrate {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/*MODAL VENTA*/
+.container-recibo{
+  width: 100%;
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container-recibo .title {
+  border-radius: 15px 15px 0 0;
+  margin-bottom: 1rem;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  background: linear-gradient(-135deg, #8ed1e6, #79c298);
+}
+.titulos-recibo{
+  font-weight: 700;
+}
+.info-recibo{
+  font-size: 15px;
+}
+.producto-recibo{
+  list-style-type: none; 
+}
+/*MODAL PRODUCTO*/

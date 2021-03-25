@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Titulo -->
+  <title>Chlorine</title>
+
+  <!-- logo -->
+  <link rel="shortcut icon" href="./img/logo-chlorine.svg" type="image/x-icon">
+
+  <!-- Styles -->
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://kit.fontawesome.com/725bad6274.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body class="bg-color o-hidden">
+
+  <header>
+    <nav class="navbar-expand-lg bg-nav navbar-light">
+      <div class="contenedor navbar">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./img/logo-chlorine.svg" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Tienda.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Ofertas.html">Ofertas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Faq.html">C & P</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./Faq.html">FAQ</a>
+            </li>
+            <li class="lst-last">
+              <div class="btn-group">
+                <button type="button" id="btn-user" class="btn bg-comp" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">¿Ya tienes Cuenta?</button>
+                <button type="button" class="btn bg-comp dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#btnLogin">Iniciar Sesión</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#btnRegistrate">Regístrate</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="modal fade" id="btnLogin">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content without-color-border">
+        <div class="container-login">
+          <div class="title">
+            <img src="./img/logo-chlorine.svg" height="100px" alt="CHLORINE">
+            <button type="button" class="close " data-dismiss="modal">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <h5 class="modal-title text-center">INICIAR SESIÓN</h5>
+          <div class="modal-body">
+            <form onsubmit="return false">
+              <div class="field">
+                <input id="log-email" type="text" required>
+                <label>Correo Electrónico</label>
+              </div>
+              <div class="field">
+                  <input id="lo-password" type="password" required>
+                  <label>Contraseña</label>
+              </div>
+              <div class="content">
+                <div class="checkbox">
+                  <input type="checkbox" id="remember-me">
+                  <label for="remember-me">Recordarme</label>
+                </div>
+                <div class="pass-link">
+                  <a href="#">¿Olvidaste tu Contraseña?</a>
+                </div>
+              </div>
+              <div class="field">
+                  <input id="login" type="submit" value="Iniciar Sesión" >
+              </div>   
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade scroll-registrate" id="btnRegistrate">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+      <div class="modal-content without-color-border">
+        <div class="container-login">
+          <div class="title">
+            <img src="./img/logo-chlorine.svg" alt="CHLORINE" height="100px">
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div>
+            <h5 class="modal-title text-center">REGÍSTRATE</h5>
+          </div>
+          <div class="modal-body">
+            <form onsubmit="return false">       
+              <div class="field">
+                <input id="name" type="text" required>
+                <label>Nombre Completo</label>
+              </div>                  
+              <div class="field">
+                <input id="nickname" type="text" required>
+                <label>Nombre de usuario</label>
+              </div>
+              <div class="field">
+                <input id="email" type="email" required>
+                <label>Correo Electrónico</label>
+              </div>
+              <div class="field">
+                  <input id="password" type="password" required>
+                  <label>Contraseña</label>
+              </div>                                   
+              <br>
+              <div class="field">
+                  <input id="registro-user" type="submit" value="Registrarme" >
+              </div>  
+              <div class="terminos">
+                Al registrarte, aceptas nuestras
+                <a href="#" target="">Condiciones de uso</a>
+                y
+                <a href="#" target="">Política de privacidad</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="contenedor aniview animate__animated" data-av-animation="animate__bounceInUp">
+      <h1>Preguntas Frecuentes</h1>
+    </div>
+    <div class="contenedor">
+      <section class="accordion-section clearfix mt-3 aniview animate__animated" data-av-animation="animate__bounceInUp" aria-label="Question Accordions">
+        <div class="container">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
+                <h3 class="panel-title">
+
+                  <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion"
+                    href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92"
+                      class="svg-icon fill first-color s-mr-1 flex-none small">
+                      <path
+                        d="M45.386.004C19.983.344-.333 21.215.005 46.619c.34 25.393 21.209 45.715 46.611 45.377 25.398-.342 45.718-21.213 45.38-46.615-.34-25.395-21.21-45.716-46.61-45.377zM45.25 74l-.254-.004c-3.912-.116-6.67-2.998-6.559-6.852.109-3.788 2.934-6.538 6.717-6.538l.227.004c4.021.119 6.748 2.972 6.635 6.937C51.904 71.346 49.123 74 45.25 74zm16.455-32.659c-.92 1.307-2.943 2.93-5.492 4.916l-2.807 1.938c-1.541 1.198-2.471 2.325-2.82 3.434-.275.873-.41 1.104-.434 2.88l-.004.451H39.43l.031-.907c.131-3.728.223-5.921 1.768-7.733 2.424-2.846 7.771-6.289 7.998-6.435.766-.577 1.412-1.234 1.893-1.936 1.125-1.551 1.623-2.772 1.623-3.972a7.74 7.74 0 0 0-1.471-4.576c-.939-1.323-2.723-1.993-5.303-1.993-2.559 0-4.311.812-5.359 2.478-1.078 1.713-1.623 3.512-1.623 5.35v.457H27.936l.02-.477c.285-6.769 2.701-11.643 7.178-14.487C37.947 18.918 41.447 18 45.531 18c5.346 0 9.859 1.299 13.412 3.861 3.6 2.596 5.426 6.484 5.426 11.556 0 2.837-.896 5.502-2.664 7.924z">
+                      </path>
+                    </svg>
+                    ​¿Cómo puedo hacer una orden?
+                  </a>
+                </h3>
+              </div>
+              <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+                <div class="panel-body px-3 mb-4">
+                  <p>Agrega los productos que deseas adquirir en tu carrito de compras y selecciona un método de pago
+                    para programar la orden
+                    del pedido realizado, después un representante de ventas se pondrá en contacto contigo para
+                    confirmar el pedido y los
+                    pasos a realizar para que lo puedas recibir en el tiempo programado.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
+                <h3 class="panel-title">
+                  <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion"
+                    href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92"
+                      class="svg-icon fill first-color s-mr-1 flex-none small">
+                      <path
+                        d="M45.386.004C19.983.344-.333 21.215.005 46.619c.34 25.393 21.209 45.715 46.611 45.377 25.398-.342 45.718-21.213 45.38-46.615-.34-25.395-21.21-45.716-46.61-45.377zM45.25 74l-.254-.004c-3.912-.116-6.67-2.998-6.559-6.852.109-3.788 2.934-6.538 6.717-6.538l.227.004c4.021.119 6.748 2.972 6.635 6.937C51.904 71.346 49.123 74 45.25 74zm16.455-32.659c-.92 1.307-2.943 2.93-5.492 4.916l-2.807 1.938c-1.541 1.198-2.471 2.325-2.82 3.434-.275.873-.41 1.104-.434 2.88l-.004.451H39.43l.031-.907c.131-3.728.223-5.921 1.768-7.733 2.424-2.846 7.771-6.289 7.998-6.435.766-.577 1.412-1.234 1.893-1.936 1.125-1.551 1.623-2.772 1.623-3.972a7.74 7.74 0 0 0-1.471-4.576c-.939-1.323-2.723-1.993-5.303-1.993-2.559 0-4.311.812-5.359 2.478-1.078 1.713-1.623 3.512-1.623 5.35v.457H27.936l.02-.477c.285-6.769 2.701-11.643 7.178-14.487C37.947 18.918 41.447 18 45.531 18c5.346 0 9.859 1.299 13.412 3.861 3.6 2.596 5.426 6.484 5.426 11.556 0 2.837-.896 5.502-2.664 7.924z">
+                      </path>
+                    </svg>
+                    Pago y envío
+                  </a>
+                </h3>
+              </div>
+              <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                <div class="panel-body px-3 mb-4">
+                  <p>Los métodos de pago son por medio de transferencia electrónica o bien con tarjeta de crédito o
+                    débito Visa, Mastercard.
+                    (Por el momento no aceptamos American Express). El envío se realiza con un monto mínimo de compra y
+                    con transporte
+                    propio de la empresa. (Pueden existir cargos extras dependiendo de la distancia del lugar de
+                    entrega).</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
+                <h3 class="panel-title">
+                  <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion"
+                    href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92"
+                      class="svg-icon fill first-color s-mr-1 flex-none small">
+                      <path
+                        d="M45.386.004C19.983.344-.333 21.215.005 46.619c.34 25.393 21.209 45.715 46.611 45.377 25.398-.342 45.718-21.213 45.38-46.615-.34-25.395-21.21-45.716-46.61-45.377zM45.25 74l-.254-.004c-3.912-.116-6.67-2.998-6.559-6.852.109-3.788 2.934-6.538 6.717-6.538l.227.004c4.021.119 6.748 2.972 6.635 6.937C51.904 71.346 49.123 74 45.25 74zm16.455-32.659c-.92 1.307-2.943 2.93-5.492 4.916l-2.807 1.938c-1.541 1.198-2.471 2.325-2.82 3.434-.275.873-.41 1.104-.434 2.88l-.004.451H39.43l.031-.907c.131-3.728.223-5.921 1.768-7.733 2.424-2.846 7.771-6.289 7.998-6.435.766-.577 1.412-1.234 1.893-1.936 1.125-1.551 1.623-2.772 1.623-3.972a7.74 7.74 0 0 0-1.471-4.576c-.939-1.323-2.723-1.993-5.303-1.993-2.559 0-4.311.812-5.359 2.478-1.078 1.713-1.623 3.512-1.623 5.35v.457H27.936l.02-.477c.285-6.769 2.701-11.643 7.178-14.487C37.947 18.918 41.447 18 45.531 18c5.346 0 9.859 1.299 13.412 3.861 3.6 2.596 5.426 6.484 5.426 11.556 0 2.837-.896 5.502-2.664 7.924z">
+                      </path>
+                    </svg>
+                    Recolección de mercancía en tienda
+                  </a>
+                </h3>
+              </div>
+              <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                <div class="panel-body px-3 mb-4">
+                  <p>Sí así lo desea, puede recoger el producto en la sucursal que elija, una vez que se ha realizado la
+                    confirmación de la
+                    existencia de los productos solicitados y también el pago de los mismos.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading p-3 mb-3" role="tab" id="heading3">
+                <h3 class="panel-title">
+                  <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion"
+                    href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92"
+                      class="svg-icon fill first-color s-mr-1 flex-none small">
+                      <path
+                        d="M45.386.004C19.983.344-.333 21.215.005 46.619c.34 25.393 21.209 45.715 46.611 45.377 25.398-.342 45.718-21.213 45.38-46.615-.34-25.395-21.21-45.716-46.61-45.377zM45.25 74l-.254-.004c-3.912-.116-6.67-2.998-6.559-6.852.109-3.788 2.934-6.538 6.717-6.538l.227.004c4.021.119 6.748 2.972 6.635 6.937C51.904 71.346 49.123 74 45.25 74zm16.455-32.659c-.92 1.307-2.943 2.93-5.492 4.916l-2.807 1.938c-1.541 1.198-2.471 2.325-2.82 3.434-.275.873-.41 1.104-.434 2.88l-.004.451H39.43l.031-.907c.131-3.728.223-5.921 1.768-7.733 2.424-2.846 7.771-6.289 7.998-6.435.766-.577 1.412-1.234 1.893-1.936 1.125-1.551 1.623-2.772 1.623-3.972a7.74 7.74 0 0 0-1.471-4.576c-.939-1.323-2.723-1.993-5.303-1.993-2.559 0-4.311.812-5.359 2.478-1.078 1.713-1.623 3.512-1.623 5.35v.457H27.936l.02-.477c.285-6.769 2.701-11.643 7.178-14.487C37.947 18.918 41.447 18 45.531 18c5.346 0 9.859 1.299 13.412 3.861 3.6 2.596 5.426 6.484 5.426 11.556 0 2.837-.896 5.502-2.664 7.924z">
+                      </path>
+                    </svg>
+                    Devoluciones y reembolsos
+                  </a>
+                </h3>
+              </div>
+              <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                <div class="panel-body px-3 mb-4">
+                  <p>Es muy importante revisar la calidad del producto una vez recibido el pedido. Si no recibe el
+                    producto en buenas
+                    condiciones puede solicitar el cambio físico del mismo, para esto se le solicita dar aviso inmediato
+                    de cualquier
+                    inconformidad y de esta forma poder brindarle la mejor solución.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <section class="contenedor row">
+      <img class="col-12 col-sm-4 col-md-4 col-lg-4" src="./img/logo-chlorine.svg" alt="logo">
+      <nav class="col-12 col-sm-4 col-md-4 col-lg-4">
+        <ul class="nav-footer">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./Tienda.html">Tienda</a></li>
+          <li><a href="./Ofertas.html">Ofertas</a></li>
+          <li><a href="./ChlorineP.html">C & P</a></li>
+          <li><a href="./Nosotros.html">Nosotros</a></li>
+          <li><a href="./Faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-social col-12 col-sm-4 col-md-4 col-lg-4">
+        <section class="row">
+          <a class="col-4 col-sm-12 col-md-4" href="https://www.facebook.com/CHLORINEproductosdelimpieza"><img src="./img/facebook.svg" alt="facebook"></a>
+                    <a class="col-4 col-sm-12 col-md-4" href="https://www.instagram.com"><img src="./img/instagram.svg" alt="instagram"></a>
+                    <a class="col-4 col-sm-12 col-md-4" href="https://www.whatsapp.com"><img src="./img/whatsapp.svg" alt="whatsapp"></a>
+        </section>
+      </nav>
+    </section>
+    <p class="text-light bg-dark">Todos los derechos reservados - Chlorine &copy; 2020</p>
+  </footer>
+
+  <!-- Javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/jquery-aniview/dist/jquery.aniview.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="./js/bootstrap.js"></script>
+  <script src="./js/app.js"></script>
+
+</body>
+
+</html>
